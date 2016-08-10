@@ -4,6 +4,7 @@
     <title>blah</title>
     <meta charset="utf-8">
     <script>
+    var loadCanvas = function () {
       var c = document.getElementById("myCanvas");
       var ctx = c.getContext("2d");
       ctx.fillStyle = "#FF0000";
@@ -11,9 +12,10 @@
       ctx.beginPath();
       ctx.arc(95,50,40,0,2*Math.PI);
       ctx.stroke();
+    }
     </script>
   </head>
-  <body>
+  <body onload="loadCanvas()">
     <canvas id="myCanvas" width="300px" height="300px" style="border:1px solid #d3d3d3;"></canvas>
 
   </body>
